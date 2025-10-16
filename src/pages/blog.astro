@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Intro from '../components/Intro.astro'
+import Card from '../components/Cards.astro'
+import '../styles/global.css'
+
+const cards = [
+  {
+    imageSrc: '/images/img1.jpg',
+    title: 'Imagen 1',
+    description: 'Descripción de la imagen 1'
+  },
+  {
+    imageSrc: '/images/img2.jpg',
+    title: 'Imagen 2',
+    description: 'Descripción de la imagen 2'
+  },
+  {
+    imageSrc: '/images/img3.jpg',
+    title: 'Imagen 3',
+    description: 'Descripción de la imagen 3'
+  }
+];
+---
+<Layout title="Blog" texto="Pagina de Blog">
+    <Intro titulo="Welcome to My Blog" texto="Here is a masonry blog layout with no sidebar" />
+    <div class="card-container">
+        {cards.map(card => (
+        <Card {...card} />
+        ))}
+    </div>
+</Layout>
+
+<style>
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+</style>
+

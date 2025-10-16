@@ -1,0 +1,79 @@
+---
+const {titulo, texto} = Astro.props
+---
+<section id="section--info">
+    <div class="div--story">
+        <h2>{titulo}</h2>
+        <p>{texto}</p>
+    </div>
+    <div class="div--form">
+        <label for="brand-strategy">Brand Strategy</label>
+        <progress id="brand-strategy" value="80" max="100">80%</progress>
+        <label for="internet-marketing">Internet Marketing</label>
+        <progress id="internet-marketing" value="60" max="100">60%</progress>
+        <label for="app-development">App Development</label>
+        <progress id="app-development" value="50" max="100">50%</progress>
+        <label for="customer-happiness">Customer Happiness</label>
+        <progress id="customer-happiness" value="90" max="100">90%</progress>
+    </div>
+</section>
+
+<style> 
+#section--info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin: 30px;
+}
+
+#section--info .div--story {
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        font-size: 25px;
+        font-weight: normal;
+    }
+    p {
+        font-weight: lighter;
+        /* font-size: 18px; */
+    }
+}
+
+#section--info .div--form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+progress {
+    width: 90%;
+    height: 25px;
+    background: #e0e0e0;
+    position: relative;
+}
+
+progress::-webkit-progress-bar {
+    background: #e0e0e0;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, #2EA3F2, #2C72EC, #2EA3F2);
+}
+
+progress::-moz-progress-bar {
+    background: linear-gradient(to right, #2EA3F2, #2C72EC, #2EA3F2)
+}
+progress::before {
+    content: attr(value) '%';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+</style>

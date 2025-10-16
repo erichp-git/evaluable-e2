@@ -1,16 +1,154 @@
 ---
-
+//Base
+import Layout from '../layouts/Layout.astro'
+import '../styles/global.css'
+// Importacion de componentes
+import Boton from '../components/Boton.astro'
+import TablaImagenes from '../components/TablaImagenes.astro'
 ---
+<Layout title="Inicio" description="Bienvenido a mi sitio">
+	<div class="carousel">
+    	<input type="radio" name="slider" id="slide1" checked>
+    	<input type="radio" name="slider" id="slide2">
+	    <div class="slides">
+			<div class="slide">
+				<h2>Welcome To My Website</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in risus eget lectus suscipit malesuada. Maecenas ut urna mollis, aliquam eros at, laoreet metus.</p>
+				<Boton texto="Enter" href="/"/>
+			</div>
+    		<div class="slide">
+				<h2>We Are Here To Help</h2>
+        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in risus eget lectus suscipit malesuada. Maecenas ut urna mollis, aliquam eros at, laoreet metus.</p>
+				<Boton texto="Enter" href="/"/>
+      		</div>
+    	</div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    	<label for="slide1" class="nav left">&#10094;</label>
+    	<label for="slide2" class="nav right">&#10095;</label>
+	</div>
+	<div class="div--descripcion">
+		<p>We Are a Company of Passionate Designers and <br> Developers</p>
+	</div>
+	<TablaImagenes 
+	AltImg1="Ilustracion de un documento"
+	AltImg2="Ilustracion de un icono gps"
+	AltImg3="Ilustracion de un bocadillo de dialogo"
+	AltImg4="Ilustracion de un palanca de niveles"
+
+	img1="../../public/img/documento.jpg"
+	img2="../../public/img/ubicacion.jpg"
+	img3="../../public/img/bocadillo.png"
+	img4="../../public/img/opciones.png"
+
+
+	titulo1="Lorem Ipsum"
+	texto1="Divi will change the way you build websites forever. The advanced page builder makes it possible to build truly dynamic pages without learning code."
+	titulo2="Lorem Ipsum"
+	texto2="Divi will change the way you build websites forever. The advanced page builder makes it possible to build truly dynamic pages without learning code."
+	titulo3="Lorem Ipsum"
+	texto3="Divi will change the way you build websites forever. The advanced page builder makes it possible to build truly dynamic pages without learning code."
+	titulo4="Lorem Ipsum"
+	texto4="Divi will change the way you build websites forever. The advanced page builder makes it possible to build truly dynamic pages without learning code." 
+	/>
+	<section class="carousel">
+		<div class="slide slide-alt">
+			<h2>Drop Me a Line</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in risus eget lectus suscipit malesuada. Maecenas ut urna mollis, aliquam eros at, laoreet metus.</p>
+			<Boton texto="Contact" href="/"/>
+		</div>
+	</section>
+</Layout>
+
+<style>
+.carousel {
+      position: relative;
+      width: 100%;
+      max-width: 80%;
+      margin: 50px auto;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	  color: white;
+    }
+
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
+	height: 500px;
+	justify-content: center;
+  	align-items: center;
+}
+.slide {
+	width: 100%;
+	height: 500px;
+	flex-shrink: 0;
+	padding: 40px;
+	background-image: linear-gradient(to bottom, #2E6EF3, #2EA2F1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+}
+.slide-alt {
+	height: 300px;
+}
+.slide:nth-child(2) {
+  background-image: linear-gradient(to bottom, #22A8B7, #27C7B8);
+}
+.slide h2 {
+    margin-bottom: 20px;
+}
+.slide p {
+  margin-bottom: 30px;
+  max-width: 800px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav.left {
+    left: 10px;
+}
+
+.nav.right {
+    right: 10px;
+}
+
+#slide1:checked ~ .slides {
+    transform: translateX(25%);
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-75%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+.div--descripcion{
+	width: 100%;
+	height: 150px;
+	background-color: #F7F7F7;
+	font-size: 30px;
+	text-align: center;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+
+</style>

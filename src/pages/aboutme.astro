@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Intro from '../components/Intro.astro'
+import BarrasPorcentaje from '../components/BarrasPorcentaje.astro'
+import '../styles/global.css'
+---
+<Layout title="About Me" description="Sitio sobre mi">
+    <Intro introTitulo="About Me" introSubtitulo="Your Subtitle Goes Here"/>
+    <BarrasPorcentaje titulo="This is My Story" texto="Curabitur quis dui volutpat, cursus eros ut, commodo elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut id est euismod, rhoncus nunc quis, lobortis turpis. Tam sociis natoque. Curabitur quis dui volutpat, cursus eros ut, commodo elit. Cum sociis natoque penatibus et magnis dis parturient montes." />
+    <article>
+        <section class="section--titulo">
+            <h2 id="article-section--titulo">My Recent Work</h2>
+    	</section>
+    	<section class="section--trabajos">
+    	    <div class="article-section--trabajos"></div>
+    	    <div class="article-section--trabajos"></div>
+    	    <div class="article-section--trabajos"></div>
+    	</section>
+    </article>
+</Layout>
+
+<style>
+
+article {
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.section--titulo {
+    text-align: center;
+}
+
+#article-section--titulo {
+    padding-top: 25px;
+    font-size: 35px;
+    font-weight: lighter;
+    color: #333;
+}
+
+.section--trabajos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 100%;
+}
+
+.article-section--trabajos {
+    width: 250px; 
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+</style>

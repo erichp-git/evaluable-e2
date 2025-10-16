@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Intro from '../components/Intro.astro'
+import TablaImagenes from '../components/TablaImagenes.astro'
+import BarrasPorcentaje from '../components/BarrasPorcentaje.astro'
+import '../styles/global.css'
+import { Image } from 'astro:assets'
+import perfil1 from '../../public/img/portrait-03.jpg'
+import perfil2 from '../../public/img/portrait-06.jpg'
+import perfil3 from '../../public/img/portrait-04.jpg'
+
+---
+<Layout title="About Us" texto="Pagina About Us">
+    <Intro introTitulo="About Us" introSubtitulo="Your Subtitle Goes Here"/>
+	<TablaImagenes 
+	AltImg1="Ilustracion de un monitor"
+	AltImg2="Ilustracion de una nube"
+	AltImg3="Ilustracion de unos engranajes"
+	AltImg4="Ilustracion de unas herramientas"
+
+	img1="../../public/img/monitor.png"
+	img2="../../public/img/nube.png"
+	img3="../../public/img/engranajes.png"
+	img4="../../public/img/herramientas.png"
+
+
+	titulo1="A Digital Agency"
+	texto1="Curabitur quis dui volutpat, cursus eros elut commodo elit cum sociis natoque penatibus"
+	titulo2="Forward Thinking"
+	texto2="Curabitur quis dui volutpat, cursus eros elut commodo elit cum sociis natoque penatibus"
+	titulo3="Problem Solvers"
+	texto3="Curabitur quis dui volutpat, cursus eros elut commodo elit cum sociis natoque penatibus"
+	titulo4="Customer Support"
+	texto4="Curabitur quis dui volutpat, cursus eros elut commodo elit cum sociis natoque penatibus" 
+	/>
+    <BarrasPorcentaje titulo="Our Story" texto="Curabitur quis dui volutpat, cursus eros ut, commodo elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut id est euismod, rhoncus nunc quis, lobortis turpis. Tam sociis natoque. Curabitur quis dui volutpat, cursus eros ut, commodo elit. Cum sociis natoque penatibus et magnis dis parturient montes." />
+	<div class="div--perfiles">
+    	<div class="perfil">
+    	  <Image src={perfil1} alt="Foto de Empleado 1" />
+    	  <h3>Team Member 1</h3>
+    	  <p class="perfil--puesto">Company Role</p>
+    	  <p class="perfil--descripcion">Aenean consectetur ipsum ante, vel egestas enim tincidunt quis. Pellentesque vitae congue neque, vel mattis ante. In vitae tempus nunc.</p>
+    	</div>
+    	<div class="perfil">
+    	  <Image src={perfil2} alt="Foto de Empleado 2" />
+    	  <h3>Team Member 2</h3>
+    	  <p class="perfil--puesto">Company Role</p>
+    	  <p class="perfil--descripcion">Aenean consectetur ipsum ante, vel egestas enim tincidunt quis. Pellentesque vitae congue neque, vel mattis ante. In vitae tempus nunc.</p>
+    	</div>
+    	<div class="perfil">
+    	  <Image src={perfil3} alt="Foto de Empleado 3" />
+    	  <h3>Team Member 3</h3>
+    	  <p class="perfil--puesto">Company Role</p>
+    	  <p class="perfil--descripcion">Aenean consectetur ipsum ante, vel egestas enim tincidunt quis. Pellentesque vitae congue neque, vel mattis ante. In vitae tempus nunc.</p>
+    	</div>
+  </div>
+</Layout>
+<style>
+	.div--perfiles {
+    	display: flex;
+    	flex-wrap: wrap;
+    	gap: 45px;
+		justify-content: center;
+		margin-bottom: 50px;
+    }
+
+    .perfil {
+	    width: 300px;
+    }
+
+    .perfil img {
+    	width: 100%;
+    	object-fit: cover;
+    	margin-bottom: 5px;
+    }
+
+    .perfil h3 {
+    	font-size: 1.2em;
+    }
+
+    .perfil--puesto {
+    	color: #555;
+    	margin-bottom: 10px;
+    }
+
+    .perfil--descripcion {
+    	font-size: 0.95em;
+    	color: #666;
+    }
+
+    @media (max-width: 768px) {
+    	.div--perfiles {
+    		flex-direction: column;
+    		align-items: center;
+    	}
+    }
+</style>
