@@ -1,24 +1,31 @@
 ---
-const { src, alt, titulo, descripcion } = Astro.props;
+const { src, alt, titulo, descripcion, autor } = Astro.props;
 ---
 <div class="tarjeta">
   <img src={src} alt={alt} />
   <h3>{titulo}</h3>
-  <p>{descripcion}</p>
+  <p>{autor}</p>
+  <p class="blog--descripcion">{descripcion}</p>
 </div>
 
 <style>
   .tarjeta {
-    width: 300px;
-    padding: 1rem;
+    width: 400px;
+    height: fit-content;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .tarjeta img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
   }
+  h3, p {
+    margin: 5px 15px;
+  }
+  .blog--descripcion {
+    font-size: 1.2rem;
+  }
+
 </style>
