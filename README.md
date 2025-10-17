@@ -5,7 +5,7 @@ Este proyecto es una actividad evaluativa que consiste en recrear una página we
 - Layout original: [Live Demo - Elegant Themes](https://www.elegantthemes.com/layouts/legacy-premade/simple-home-page/live-demo)  
 - Captura del layout:  
   ![Captura de pantalla](/simplelayout/public/img/simplelayout.png)
-- Página desplegada: [Enlace a Neocities](erichp.neocities.org)
+- Página desplegada: [Enlace a vercel](https://evaluable-e2.vercel.app/)
 
 ## 📂 Estructura de Archivos
 
