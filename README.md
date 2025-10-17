@@ -1,43 +1,73 @@
-# Astro Starter Kit: Minimal
+# 📄 Evaluable 1
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Este proyecto es una actividad evaluativa que consiste en recrear una página web utilizando **Astro**, control de versiones con **Git**, y el uso de **ramas en repositorios**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Layout original: [Live Demo - Elegant Themes](https://www.elegantthemes.com/layouts/legacy-premade/simple-home-page/live-demo)  
+- Captura del layout:  
+  ![Captura de pantalla](/simplelayout/public/img/simplelayout.png)
+- Repositorio en GitHub: [https://github.com/erichp-git/evaluable-e2](https://github.com/erichp-git/evaluable-e2)  
+- Página desplegada: [https://erichp-git.github.io/evaluable-e2/](https://erichp-git.github.io/evaluable-e2/)
 
-## 🚀 Project Structure
+## 📂 Estructura de Archivos
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
+/evaluable-e2
+├── README.md               # Documentación del proyecto
+├── styles/
+│   └── global.css          # Estilos globales
 ├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│   ├── fonts/              # Fuentes utilizadas
+│   └── img/                # Imágenes del sitio
+└── src/
+    ├── components/         # Componentes reutilizables
+    ├── layouts/            # Plantillas base
+    └── pages/              # Páginas del sitio
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧱 Descripción del Proyecto
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### 📁 styles/
+- `global.css`: Contiene el reset y los estilos globales aplicados a toda la web.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### 📁 layouts/
+- `Layout.astro`: Estructura base del HTML, incluyendo `<head>`, `<body>` y slots.
 
-## 🧞 Commands
+### 📁 components/
+- `BarrasPorcentaje.astro`: Sección con barras de porcentaje y texto informativo.
+- `Boton.astro`: Botón estilizado reutilizable.
+- `Cards.astro`: Tarjetas para mostrar entradas de blog.
+- `Footer.astro`: Pie de página del sitio.
+- `Header.astro`: Encabezado principal.
+- `Intro.astro`: Sección introductoria destacada.
+- `Nav.astro`: Menú de navegación.
+- `TablaImagenes.astro`: Contenedor con imágenes y texto.
 
-All commands are run from the root of the project, from a terminal:
+### 📁 pages/
+- `index.astro`: Página principal.
+- `aboutme.astro`: Información personal del creador.
+- `aboutus.astro`: Información sobre la empresa.
+- `blog.astro`: Página de blog con entradas simuladas.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 🛠️ Tecnologías Utilizadas
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **HTML5**: Estructura semántica del contenido.
+- **CSS3**: Estilización visual del sitio.
+- **Flexbox**: Diseño responsivo y flexible.
+- **Astro**: Framework moderno para sitios rápidos y estáticos.
+
+---
+
+## ✏️ Personalización
+
+Puedes adaptar este proyecto fácilmente a tus necesidades:
+
+1. Modifica los textos en los archivos `.astro` dentro de la carpeta `pages/`.
+2. Ajusta los valores de las barras de progreso en `BarrasPorcentaje.astro` para reflejar tus habilidades.
+3. Agrega tus propios entradas de blog en `blog.astro`.
+
+---
+
+## 🙌 Créditos
+
+- 🎨 Diseño original por: [Elegant Themes](https://www.elegantthemes.com/layouts/legacy-premade/simple-home-page/live-demo)  
+- 💻 Recreado por: [Eric Hernández](https://github.com/erichp-git)
