@@ -5,8 +5,7 @@ Este proyecto es una actividad evaluativa que consiste en recrear una página we
 - Layout original: [Live Demo - Elegant Themes](https://www.elegantthemes.com/layouts/legacy-premade/simple-home-page/live-demo)  
 - Captura del layout:  
   ![Captura de pantalla](/simplelayout/public/img/simplelayout.png)
-- Repositorio en GitHub: [https://github.com/erichp-git/evaluable-e2](https://github.com/erichp-git/evaluable-e2)  
-- Página desplegada: [https://erichp-git.github.io/evaluable-e2/](https://erichp-git.github.io/evaluable-e2/)
+- Página desplegada: [Enlace a Neocities](erichp.neocities.org)
 
 ## 📂 Estructura de Archivos
 
@@ -20,7 +19,7 @@ Este proyecto es una actividad evaluativa que consiste en recrear una página we
 └── src/
     ├── components/         # Componentes reutilizables
     ├── layouts/            # Plantillas base
-    └── pages/              # Páginas del sitio
+    └── pages/              # Páginas del sitio 
 
 ## 🧱 Descripción del Proyecto
 
